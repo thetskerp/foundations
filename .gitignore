@@ -1,0 +1,47 @@
+# Python environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Python caches and test artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# Build and packaging artifacts
+.pyinstaller-cache/
+.artifact-work/
+dist/
+build/
+release/
+*.spec
+
+# Local application data and generated reports
+tmp/
+outputs/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+/*.oifproj
+/*.xlsx
+/*.xls
+/*.docx
+/*.pdf
+/*.gs
+
+# Editor, operating-system and auxiliary files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+/node_modules

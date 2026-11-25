@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oif-foundations"
+version = "0.3.1"
+description = "Основания и фундаменты: проверяемое расчётное ядро и переносимые проекты"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+desktop = ["PySide6>=6.8", "openpyxl>=3.1", "python-docx>=1.2", "reportlab>=4.0"]
+reports = ["openpyxl>=3.1", "python-docx>=1.2", "reportlab>=4.0"]
+test = ["pytest>=8"]
+build = ["pyinstaller>=6.0"]
+
+[project.scripts]
+oif = "oif.cli:main"
+oif-desktop = "oif.ui.main_window:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"oif" = ["data/*.json", "data/schemes/*.png"]
+"oif.standards" = ["data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
